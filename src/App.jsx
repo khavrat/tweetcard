@@ -1,6 +1,6 @@
-import UserMenu from "./components/usermenu"
+import UserMenu from "./components/userMenu/UserMenu"
 import { lazy } from "react";
-import { Route, Router, Routes } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 
 
 const HomePage = lazy(() => import('./pages/HomePage'));
