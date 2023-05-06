@@ -3,8 +3,8 @@ import User from '../components/userMenu/UserMenu';
 function HomeView() {
     return (
       <>
-            <p>THIS HOMEPAGE</p>
-            <User/>
+        <p>THIS HOMEPAGE</p>
+        <User />
       </>
     );
     
