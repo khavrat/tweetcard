@@ -1,21 +1,27 @@
-import UserMenu from "./components/userMenu/UserMenu"
 import { lazy } from "react";
-import { Route, Routes } from "react-router-dom";
+import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements } from "react-router-dom";
+
+import SharedLayout from "./sharedLayout/SharedLayout";
+const HomeView = lazy(() => import("./pages/HomeView"));
+const TweetsView = lazy(() => import("./pages/TweetsView"));
 
 
-const HomePage = lazy(() => import('./pages/HomePage'));
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <>
+      <Route path="/tweetcard" element={<SharedLayout />}>
+        <Route index element={<HomeView />} />
+        <Route path="tweets" element={<TweetsView />} />
+      </Route>
+    </>
+  )
+);
+
 
 function App() {
   return (
-    <>
-      <Routes>
-        <Route path="/" element={<div>logo and fon</div>}>
-          <Route index element={<HomePage />} />
-        </Route>
-      </Routes>
-      <UserMenu/>
-    </>
-  )
+    <RouterProvider router={router}/>
+  );
 }
 
-export default App
+export default App;

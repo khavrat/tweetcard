@@ -1,11 +1,17 @@
-function UserMenu() {
+import { NavLink } from "react-router-dom";
+
+function User() {
     return (
-        <section>
-            {/* <img src="" alt="" width='200' height='200' style={"outline: 2px solid tomato"}></img> */}
-            <p>tweets<span>777</span></p>
-            <p>followers<span>100500</span></p>
-        </section>
-    )
+      <>
+        <div>Avatar</div>
+        <NavLink to="/tweetcard/tweets">
+          <span>777</span> 
+          tweets
+        </NavLink>
+        <p><span>100500</span> followers</p>
+        <button type="button">FOLLOW</button>
+      </>
+    );
 }
 
-export default UserMenu;
+export default User;
