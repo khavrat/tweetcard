@@ -6,14 +6,14 @@ export default defineConfig({
   plugins: [react()],
   base: "/tweetcard",
   build: {
-    outDir: "./build",
+    outDir: "./dist",
     minify: true,
     sourcemap: true,
-    emptyOutDir: true,
+    // emptyOutDir: true,
   },
-  server: {
-    open: true,
-    host: "0.0.0.0",
-    hmr: true,
-  },
+  // server: {
+  //   open: true,
+  //   host: "0.0.0.0",
+  //   hmr: true,
+  // },
 });
