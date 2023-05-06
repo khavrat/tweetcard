@@ -2,6 +2,7 @@
   "name": "tweetcard",
   "private": true,
   "version": "0.0.0",
+  "homepage": "/tweetcard/",
   "type": "module",
   "scripts": {
     "dev": "vite",
