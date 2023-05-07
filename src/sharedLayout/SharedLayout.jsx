@@ -1,6 +1,6 @@
-import Logo from "../components/userCardComponents/topSection/Logo";
-import Background from '../components/userCardComponents/topSection/Background';
-import AvatarDecorLine from "../components/userCardComponents/topSection/AvatarDecor";
+import Logo from "../components/userCardComponents/Logo";
+import Background from '../components/userCardComponents/Background';
+import AvatarDecorLine from "../components/userCardComponents/AvatarDecor";
 import { Suspense } from "react";
 import { Outlet } from "react-router-dom";
 

@@ -1,5 +1,5 @@
-import bgImg from "@images/bgImg.png";
-import classes from '../topSection/Background.module.css';
+import bgImg from "../../images/bgImg.png";
+import classes from '../userCardComponents/Background.module.css';
 
 function Background() {
   return <img className={classes.bgImg} src={bgImg} alt="dialog scheme"></img>;
