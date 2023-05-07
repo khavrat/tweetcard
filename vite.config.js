@@ -9,11 +9,8 @@ export default defineConfig({
     outDir: "./dist",
     minify: true,
     sourcemap: true,
-    // emptyOutDir: true,
   },
-  // server: {
-  //   open: true,
-  //   host: "0.0.0.0",
-  //   hmr: true,
-  // },
+  server: {
+    fallback: 'index.html',
+  },
 });

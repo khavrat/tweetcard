@@ -3,8 +3,8 @@ import { NavLink } from "react-router-dom";
 
 import formatNumberWithCommas from "../../utils/formatNumberWithCommas";
 
-function User() {
-  const [followersCount, setFollowersCount] = useState(100500);
+function User({ name, tweets, followers, avatar }) {
+  const [followersCount, setFollowersCount] = useState(followers);
   const [isFollowing, setIsFollowing] = useState(false);
 
   function toggleFollow() {
@@ -25,9 +25,9 @@ function User() {
 
   return (
     <>
-      <div>Avatar</div>
+      <img src={avatar} alt={`${name} avatar`}/>
       <NavLink to="/tweetcard/tweets">
-        <span>777</span>
+        <span>{tweets}</span>
         tweets
       </NavLink>
       <p>
