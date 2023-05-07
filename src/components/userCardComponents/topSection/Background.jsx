@@ -1,4 +1,4 @@
-import bgImg from "../../../images/bgImg.png";
+import bgImg from "@images/bgImg.png";
 import classes from '../topSection/Background.module.css';
 
 function Background() {
