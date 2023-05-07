@@ -7,7 +7,6 @@ import {
   Navigate,
 } from "react-router-dom";
 
-import SharedLayout from "./sharedLayout/SharedLayout";
 const HomeView = lazy(() => import("./pages/HomeView"));
 const TweetsView = lazy(() => import("./pages/TweetsView"));
 
@@ -15,7 +14,7 @@ const TweetsView = lazy(() => import("./pages/TweetsView"));
 const router = createBrowserRouter(
   createRoutesFromElements(
     <>
-      <Route path="/tweetcard" element={<SharedLayout />}>
+      <Route path="/tweetcard">
         <Route index element={<HomeView />} />
         <Route path="tweets" element={<TweetsView />} />
         <Route path="*" element={<Navigate to="/tweetcard" />} />

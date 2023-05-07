@@ -1,0 +1,65 @@
+.box {
+  padding: 28px 36px 36px 36px;
+}
+
+.avatarContainer {
+  position: absolute;
+  top: 38%;
+  left: 50%;
+  transform: translateX(-50%);
+  overflow: hidden;
+  z-index: 1000;
+}
+
+.avatarContainer::after {
+  content: "";
+  width: 100%;
+  height: 111%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url("../../images/avatarContainer.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  z-index: 200;
+}
+
+.avatar {
+  z-index: 100;
+  display: block;
+  width: 80px;
+  height: 80px;
+  margin: 0 auto;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  object-fit: contain;
+}
+
+.tweetsLink {
+  display: block;
+  margin-top: 88px;
+  margin-bottom: 0;
+  text-align: center;
+  font-family: "Montserrat";
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #ebd8ff;
+}
+
+.followInfo {
+  margin-top: 16px;
+  margin-bottom: 0;
+  font-family: "Montserrat";
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #ebd8ff;
+}
