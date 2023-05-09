@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 import classes from "./FollowBtn.module.css";
 
 function FollowBtn({ isFollowing, onClick, children }) {
@@ -16,7 +16,7 @@ function FollowBtn({ isFollowing, onClick, children }) {
 export default FollowBtn;
 
 FollowBtn.propTypes = {
-  isFollowing: PropTypes.bool.isRequired,
   onClick: PropTypes.func.isRequired,
   children: PropTypes.node.isRequired,
+  isFollowing: PropTypes.bool,
 };

@@ -1,30 +1,37 @@
-import PropTypes from 'prop-types';
-import { useEffect, useState } from "react";
-import fetchUsers from "../../api/apiUsers";
+import PropTypes from "prop-types";
+import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { getNewUsers, setNewUsers } from "../../redux/userSlice";
+import { getUsersByCash } from "../../api/getUserByCash";
 import User from "../userCard/UserCard";
 import classes from "../usersList/UsersList.module.css";
 
 function UsersList() {
-  const [users, setUsers] = useState([]);
+  const dispatch = useDispatch();
+  const newUsers = useSelector(getNewUsers);
 
   useEffect(() => {
-    fetchUsers()
-      .then((response) => setUsers(response.data))
-      .catch((error) => console.error(error));
-  }, []);
-
-  const usersList = Array.isArray(users) ? users : [];
+    const loadUsers = async () => {
+      if (newUsers.length === 0) {
+        const users = await getUsersByCash();
+        dispatch(setNewUsers(users));
+      }
+    };
+    loadUsers();
+  }, [dispatch, newUsers.length]);
 
   return (
-    <section className={classes.section}>
+    <section>
       <ul className={classes.cardList}>
-        {usersList.map((user) => (
+        {newUsers.map((user) => (
           <li key={user.id} className={classes.cardItem}>
             <User
+              id={user.id}
               avatar={user.avatar}
               name={user.name}
               tweets={user.tweets}
               followers={user.followers}
+              isFollowing={user.isFollowing}
             />
           </li>
         ))}
@@ -40,5 +47,5 @@ UsersList.propTypes = {
     PropTypes.shape({
       id: PropTypes.number.isRequired,
     })
-  ).isRequired,
+  ),
 };

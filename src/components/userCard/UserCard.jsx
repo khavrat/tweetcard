@@ -1,5 +1,4 @@
 import PropTypes from "prop-types";
-import { useState } from "react";
 import { NavLink } from "react-router-dom";
 
 import SharedLayout from "../../sharedLayout/SharedLayout";
@@ -7,24 +6,21 @@ import FollowBtn from "../userCardComponents/followBtn/FollowBtn";
 import classes from "../userCard/UserCard.module.css";
 
 import formatNumberWithCommas from "../../utils/formatNumberWithCommas";
+import { useDispatch } from "react-redux";
+import { updateNewUsers } from "../../redux/userSlice";
 
-function User({ name, tweets, followers, avatar }) {
-  const [followersCount, setFollowersCount] = useState(100500 + followers);
-  const [isFollowing, setIsFollowing] = useState(false);
+function User({ id, name, tweets, followers, isFollowing, avatar }) {
+  const dispatch = useDispatch();
 
   function toggleFollow() {
+
     if (isFollowing) {
-      setFollowersCount((prevCount) => {
-        const newCount = prevCount - 1;
-        return newCount > 0 ? newCount : 0;
-      });
-      setIsFollowing(false);
+      const followersCount = followers - 1;
+      dispatch(updateNewUsers({ id, followersCount, isFollowing }));
+
     } else {
-      setFollowersCount((prevCount) => {
-        const newCount = prevCount + 1;
-        return newCount > 0 ? newCount : 0;
-      });
-      setIsFollowing(true);
+      const followersCount = followers + 1;
+      dispatch(updateNewUsers({ id, followersCount, isFollowing }));
     }
   }
 
@@ -39,7 +35,7 @@ function User({ name, tweets, followers, avatar }) {
         tweets
       </NavLink>
       <p className={classes.followInfo}>
-        <span>{formatNumberWithCommas(followersCount)}</span> followers
+        <span>{formatNumberWithCommas(followers)}</span> followers
       </p>
       <FollowBtn isFollowing={isFollowing} onClick={toggleFollow}>
         {" "}
@@ -51,9 +47,11 @@ function User({ name, tweets, followers, avatar }) {
 
 export default User;
 
- User.propTypes = {
-   name: PropTypes.string.isRequired,
-   tweets: PropTypes.number.isRequired,
-   followers: PropTypes.number.isRequired,
-   avatar: PropTypes.string.isRequired,
- };
+User.propTypes = {
+  id: PropTypes.string,
+  name: PropTypes.string,
+  tweets: PropTypes.number,
+  followers: PropTypes.number,
+  isFollowing: PropTypes.bool,
+  avatar: PropTypes.string,
+};

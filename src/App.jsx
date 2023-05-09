@@ -1,4 +1,3 @@
-// import { lazy } from "react";
 import {
   Route,
   RouterProvider,
@@ -8,9 +7,6 @@ import {
 } from "react-router-dom";
 import HomeView from "./pages/HomeView";
 import TweetsView from "./pages/TweetsView";
-
-// const HomeView = lazy(() => import("./pages/HomeView"));
-// const TweetsView = lazy(() => import("./pages/TweetsView"));
 
 
 const router = createBrowserRouter(
