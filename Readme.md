@@ -1,9 +1,12 @@
-#"TWEETCARD 
+TWEETCARD 
 
 Це тестове завдання, що виконувалося з використанням таких інструментів:
 
 Створення проекту та деплой на GitHub: [Vitejs](https://vitejs.dev/guide/);
-Створення компонентів, управління станом: [React](https://legacy.reactjs.org/docs/getting-started.html), [React Redux](https://react-redux.js.org/introduction/getting-started);  
+
+Створення компонентів, управління станом: [React](https://legacy.reactjs.org/docs/getting-started.html), 
+
+[React Redux](https://react-redux.js.org/introduction/getting-started);  
 
 Mаршрутизація: [React Router DOM](https://reactrouter.com/en/main);  
 
