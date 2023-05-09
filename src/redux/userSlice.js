@@ -30,7 +30,7 @@ const persistConfig = {
 
 export const persistedReducer = persistReducer(
   persistConfig,
-  usersSlice.reducer
+  usersSlice.reducer, 
 );
 
 export const { setNewUsers, updateNewUsers } = usersSlice.actions;
