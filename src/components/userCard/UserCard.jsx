@@ -13,11 +13,9 @@ function User({ id, name, tweets, followers, isFollowing, avatar }) {
   const dispatch = useDispatch();
 
   function toggleFollow() {
-
     if (isFollowing) {
       const followersCount = followers - 1;
       dispatch(updateNewUsers({ id, followersCount, isFollowing }));
-
     } else {
       const followersCount = followers + 1;
       dispatch(updateNewUsers({ id, followersCount, isFollowing }));
@@ -30,7 +28,7 @@ function User({ id, name, tweets, followers, isFollowing, avatar }) {
       <div className={classes.avatarContainer}>
         <img className={classes.avatar} src={avatar} alt={`${name} avatar`} />
       </div>
-      <NavLink to="/tweetcard/tweets" className={classes.tweetsLink}>
+      <NavLink to={`/tweetcard/tweets`} className={classes.tweetsLink}>
         <span>{tweets} </span>
         tweets
       </NavLink>

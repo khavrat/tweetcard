@@ -37,5 +37,3 @@ export const { setNewUsers, updateNewUsers } = usersSlice.actions;
 
 // Selectors
 export const getNewUsers = (state) => state.users.newUsers;
-export const getFollowersCount = (state, id) =>
-  state.users.newUsers[id]?.followers ?? 0;
