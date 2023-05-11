@@ -1,10 +1,10 @@
 import PropTypes from 'prop-types';
 import { NavLink } from "react-router-dom";
-import classes from '../userCardComponents/followBtn/FollowBtn.module.css'
+import classes from '../backLink/BackLink.module.css';
 
 const BackLink = ({ to, children }) => {
   return (
-    <NavLink to={to} className={`${classes.followBtn} ${classes.following}`}>
+    <NavLink to={to} className={classes.backLinkBtn}>
       {children}{" "}
     </NavLink>
   );

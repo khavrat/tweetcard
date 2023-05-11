@@ -1,26 +1,40 @@
+.userTitle {
+  position: sticky;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 90px 0 30px 0;
+  font-family: "Montserrat";
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 32px;
+  color: #ebd8ff;
+  background-color: #766a92;
+  text-align: center;
+}
+
 .tweetList {
-  padding: 0;
+  padding: 0 0 0 0;
   margin: 0 auto;
   text-align: center;
 }
 
-.twetItem{
-display: block;
-margin: 0 auto;
-text-align: center;
-margin-top: 26px;
-text-align: center;
-padding: 14px 28px;
-width: 196px;
-box-shadow: 0px 3.43693px 3.43693px rgba(0, 0, 0, 0.25);
-border-radius: 10.3108px;
-border: none;
-font-family: 'Montserrat';
-font-weight: 600;
-font-size: 18px;
-line-height: 22px;
-text-transform: uppercase;
-color: #373737;
-background: #EBD8FF;
+.twetItem {
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 26px;
+  list-style: none;
+  text-align: center;
+  padding: 14px 28px;
+  width: 196px;
+  box-shadow: 0px 3.43693px 3.43693px rgba(0, 0, 0, 0.25);
+  border-radius: 10.3108px;
+  border: none;
+  font-family: "Montserrat";
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  color: #373737;
+  background: #ebd8ff;
 }
-

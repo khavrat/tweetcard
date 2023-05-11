@@ -23,7 +23,11 @@ function UserInfo({ id, tweets, followers, isFollowing }) {
 
   return (
     <div className={classes.userInfo}>
-      <NavLink to={`/tweetcard/tweets`} className={classes.tweetsLink}>
+      <NavLink
+        to={`/tweetcard/tweets`}
+        state={{ from: id }}
+        className={classes.tweetsLink}
+      >
         <span>{tweets} </span>
         tweets
       </NavLink>

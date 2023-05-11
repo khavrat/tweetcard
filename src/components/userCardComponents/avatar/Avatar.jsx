@@ -4,7 +4,11 @@ import classes from "../avatar/Avatar.module.css";
 function Avatar({ name, avatar }) {
   return (
     <div className={classes.avatarContainer}>
-      <img className={classes.avatar} src={avatar} alt={`${name} avatar`} />
+      <img
+        className={classes.avatar}
+        src={avatar}
+        alt={`${name} avatar`}
+      />
     </div>
   );
 }
