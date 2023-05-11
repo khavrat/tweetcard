@@ -8,7 +8,6 @@ import {
 import HomeView from "./pages/HomeView";
 import TweetsView from "./pages/TweetsView";
 
-
 const router = createBrowserRouter(
   createRoutesFromElements(
     <>

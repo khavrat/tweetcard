@@ -1,5 +1,5 @@
-import logo from "../../images/logo.svg";
-import classes from '../userCardComponents/Logo.module.css';
+import logo from "../../../images/logo.svg";
+import classes from '../Logo/Logo.module.css';
 
 function Logo() {
   return (

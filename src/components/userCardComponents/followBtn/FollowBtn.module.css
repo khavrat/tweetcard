@@ -1,26 +1,37 @@
-.followBtn{
-display: block;
-margin: 0 auto;
-margin-top: 26px;
-text-align: center;
-padding: 14px 28px;
-width: 196px;
-box-shadow: 0px 3.43693px 3.43693px rgba(0, 0, 0, 0.25);
-border-radius: 10.3108px;
-border: none;
-font-family: 'Montserrat';
-font-weight: 600;
-font-size: 18px;
-line-height: 22px;
-text-transform: uppercase;
-color: #373737;
-cursor: pointer;
+.followBtn {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  padding: 14px 28px;
+  width: 196px;
+  box-shadow: 0px 3.43693px 3.43693px rgba(0, 0, 0, 0.25);
+  border-radius: 10.3108px;
+  border: none;
+  font-family: "Montserrat";
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 22px;
+  text-transform: uppercase;
+  color: #373737;
+  cursor: pointer;
 }
 
-.follow{
-background: #EBD8FF;
+.follow {
+  background-color: #ebd8ff;
+  transition: background-color 250ms linear;
 }
 
-.following{
-background: #5CD3A8;
+.follow:hover,
+.follow:focus {
+  background-color: #dbbdfb;
+}
+
+.following {
+  background: #5cd3a8;
+  transition: background-color 250ms linear;
+}
+
+.following:hover,
+.following:focus {
+  background-color: #30de9f;
 }
