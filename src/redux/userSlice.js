@@ -7,6 +7,7 @@ const usersSlice = createSlice({
   name: "users",
   initialState: {
     newUsers: [],
+    filter: {},
   },
 
   reducers: {
@@ -20,6 +21,10 @@ const usersSlice = createSlice({
       state.newUsers[index].followers = followersCount;
       state.newUsers[index].isFollowing = !isFollowing;
     },
+
+    setFilter: (state, action) => {
+      state.filter = action.payload;
+    }
   },
 });
 
@@ -33,7 +38,8 @@ export const persistedReducer = persistReducer(
   usersSlice.reducer, 
 );
 
-export const { setNewUsers, updateNewUsers } = usersSlice.actions;
+export const { setNewUsers, updateNewUsers, setFilter } = usersSlice.actions;
 
 // Selectors
 export const getNewUsers = (state) => state.users.newUsers;
+export const getFilter = (state) => state.users.filter;
