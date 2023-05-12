@@ -46,7 +46,7 @@ function UsersList() {
   }, [filteredUsers, newUsers]);
 
   const hideLoadMoreBtn = () => {
-    if (users.length - visiblePage <= 0) {
+    if (newUsers.length - visiblePage <= 0) {
       setIsVisibleBtn(false);
     }
   };

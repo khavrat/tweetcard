@@ -1,7 +1,7 @@
 import { useDispatch } from "react-redux";
 import Select from "react-select";
 import { options } from "./DropDownOptions/";
-import {CustomStyle} from "./DropDownStyles.js";
+import { CustomStyle } from "./DropDownStyles.js";
 
 function DropDown() {
   const dispatch = useDispatch();
@@ -19,7 +19,6 @@ function DropDown() {
 
   return (
     <Select
-      //   className={classes.castomSelect}
       options={options}
       onChange={handleChange}
       autoFocus={true}
