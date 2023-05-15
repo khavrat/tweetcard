@@ -27,7 +27,7 @@
 }
 
 .following {
-  background: #5cd3a8;
+  background-color: #5cd3a8;
   transition: background-color 250ms linear;
 }
 
