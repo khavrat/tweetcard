@@ -3,7 +3,6 @@
 створити картки твітів та додати інтерактивності при клікові на кнопку
 
 ## Технічне завдання:
----
 * Відповідно до [макету](https://www.figma.com/file/zun1oP6NmS2Lmgbcj6e1IG/Test?type=design&t=YNxucFjyzX6ZmYFK-6) потрібно реалізувати картки юзера.
 * При клікові на кнопку Follow - текст змінюється на Following. Також змінюється колір кнопки. А до кількості фоловерів додається і ваш. Тобто, початкова кількість складає, наприклад, 100,500 фоловерів. При клікові на кнопку буде 100,501.
 * Юзери мають бути створені в Mockapi з наступними полями: id, user, tweets, followers, avatar.
@@ -15,7 +14,6 @@
 * Додавання фільтрації. Це має бути Dropdown із 3 опціями(оформлення на ваш розсуд): show all, follow, followings.
 
 ## Реалізація: 
----
 * Home page є сторінкою з картками юзерів та кнопкою "LOAD MORE" для відображення по 3 картки юзерів.
  
 ![card screenshort](./screenshortsReadme/card.png)
@@ -28,7 +26,6 @@
 ![dropdown screenshort](./screenshortsReadme/dropdown.png)
 
 ## Технології:
----
 * Створення проекту та деплой на GitHub: [Vitejs](https://vitejs.dev/guide/);
 * Створення компонентів, управління станом: [React](https://legacy.reactjs.org/docs/getting-started.html), [React Redux](https://react-redux.js.org/introduction/getting-started);  
 * Mаршрутизація: [React Router DOM](https://reactrouter.com/en/main);  
