@@ -1,7 +1,10 @@
 export const CustomStyle = {
   control: (base, state) => ({
     ...base,
-    marginBottom: "20px",
+    position: "fixed",
+    top: "20px",
+    zIndex: "200",
+    width: "380px",
     height: "40px",
     fontFamily: "Montserrat",
     fontWeight: "500",
@@ -27,6 +30,13 @@ export const CustomStyle = {
     fontSize: "14px",
     lineHeight: "22px",
     textTransform: "uppercase",
+  }),
+  menu: (base) => ({
+    ...base,
+    position: "fixed",
+    top: "56px",
+    zIndex: "200",
+    width: "380px",
   }),
   option: (base, state) => ({
     ...base,

@@ -15,7 +15,7 @@ function UsersList() {
   const [users, setUsers] = useState([]);
   const dispatch = useDispatch();
   const newUsers = useSelector(getNewUsers);
-  const filteredUsers = useSelector(getFilter);
+  const filter = useSelector(getFilter);
 
   useEffect(() => {
     const loadUsers = async () => {
@@ -29,7 +29,7 @@ function UsersList() {
 
   useEffect(() => {
     const visibleUsers = () => {
-      switch (filteredUsers?.value) {
+      switch (filter?.value) {
         case "follow":
           setUsers(newUsers.filter((user) => user.isFollowing === false));
           break;
@@ -43,10 +43,10 @@ function UsersList() {
       }
     };
     visibleUsers();
-  }, [filteredUsers, newUsers]);
+  }, [filter, newUsers]);
 
   const hideLoadMoreBtn = () => {
-    if (newUsers.length - visiblePage <= 0) {
+    if (users.length - visiblePage <= PER_PAGE) {
       setIsVisibleBtn(false);
     }
   };
@@ -73,7 +73,13 @@ function UsersList() {
         ))}
       </ul>
       {isVisibleBtn && (
-        <LoadMoreBtn onClick={handleLoadMoreBtn}>load more</LoadMoreBtn>
+        <LoadMoreBtn
+          onClick={handleLoadMoreBtn}
+          users={users}
+          visiblePage={visiblePage}
+        >
+          load more
+        </LoadMoreBtn>
       )}
     </section>
   );
